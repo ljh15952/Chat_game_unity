@@ -63,10 +63,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scenes\Scripts\CAM.cs" />
-    <Compile Include="Assets\Scenes\Scripts\KeyBoardScript.cs" />
-    <Compile Include="Assets\Scenes\Scripts\MessegeManager.cs" />
-    <Compile Include="Assets\Scenes\Scripts\TimerScript.cs" />
+    <Compile Include="Assets\Scripts\CAM.cs" />
+    <Compile Include="Assets\Scripts\KeyBoardScript.cs" />
+    <Compile Include="Assets\Scripts\MessegeManager.cs" />
+    <Compile Include="Assets\Scripts\TimerScript.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/Develop(2)/Projects_Unity/TextGame/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

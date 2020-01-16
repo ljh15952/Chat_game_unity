@@ -4,6 +4,7 @@ ScriptsOnlyBuild:
     - CAM
     - KeyBoardScript
     - MessegeManager
+    - TimerScript
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
@@ -23,7 +24,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/Scenes/GameScene_Example.unity:
+    Assets/Scenes/GameScene_Example.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -49,19 +50,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9924}
     - Class: 114
-      Script: {instanceID: 10270}
+      Script: {instanceID: 9998}
     - Class: 114
-      Script: {instanceID: 10636}
+      Script: {instanceID: 10272}
     - Class: 114
-      Script: {instanceID: 11108}
+      Script: {instanceID: 10590}
     - Class: 114
-      Script: {instanceID: 11478}
+      Script: {instanceID: 10640}
     - Class: 114
-      Script: {instanceID: 25598}
+      Script: {instanceID: 11068}
     - Class: 114
-      Script: {instanceID: 33258}
+      Script: {instanceID: 11114}
     - Class: 114
-      Script: {instanceID: 40176}
+      Script: {instanceID: 11436}
+    - Class: 114
+      Script: {instanceID: 11486}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -193,6 +196,12 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 1265de01d14c64ca1121ef47414fd44b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: KeyBoardScript
+  - hash:
+      serializedVersion: 2
       Hash: bd3cf68c8964d3c66d1c43f4f98508c9
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -295,6 +304,12 @@ ScriptsOnlyBuild:
     className: RemoteTestResultSender
   - hash:
       serializedVersion: 2
+      Hash: d6324c1e503ad13ee9681b759877d3ea
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MessegeManager
+  - hash:
+      serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -373,6 +388,12 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TimerScript
+  - hash:
+      serializedVersion: 2
       Hash: f336e086360abe49a3323e5f1583c35a
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -433,6 +454,12 @@ ScriptsOnlyBuild:
     className: Outline
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CAM
+  - hash:
+      serializedVersion: 2
       Hash: a63fc1a3b035e5a0b5839cd7f7b3086e
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -491,25 +518,7 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 543dac693408fb83a310aec275b54266
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: KeyBoardScript
-  - hash:
-      serializedVersion: 2
-      Hash: 4f74e58ce3a8de23ce0c545f331910ab
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MessegeManager
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CAM
   platform: 13
   scenePathNames:
-  - Assets/Scenes/Scenes/GameScene_Example.unity
+  - Assets/Scenes/GameScene_Example.unity
   playerPath: "C:/Users/ljh15/OneDrive/\uBC14\uD0D5 \uD654\uBA74/TextGame/b.apk"

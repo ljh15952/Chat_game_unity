@@ -2,6 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+public enum BG_STAGE
+{
+    state_default =0,
+    state_take_off =1,
+    state_default_open_door =2,
+    state_sit =3,
+    state_sit_take_off =4,
+    state_take_off_open_door = 5,
+}
+
+
 public class MessegeManager : MonoBehaviour
 {
     public Text _text;
@@ -9,6 +20,7 @@ public class MessegeManager : MonoBehaviour
     public bool istakepants;
     public bool isdooropen;
     public bool issit;
+    public bool ispushbutton;
 
     int hentainum = 0;
     int fartnunm = 0;
@@ -22,6 +34,7 @@ public class MessegeManager : MonoBehaviour
         istakepants = true;
         isdooropen = false;
         issit = false;
+        ispushbutton = false;
     }
 
     public void CheckString(string str)
@@ -113,7 +126,9 @@ public class MessegeManager : MonoBehaviour
         _text.text = "바지를 벗었습니다..";
         istakepants = false;
 
-        GameBg.sprite = Images[0];
+        int num = isdooropen ? (int)BG_STAGE.state_take_off_open_door : (int)BG_STAGE.state_take_off;
+
+        GameBg.sprite = Images[num];
     }
 
     void take_on_pant()
@@ -121,8 +136,9 @@ public class MessegeManager : MonoBehaviour
         _text.text = "바지를 입었습니다..";
         istakepants = true;
 
-        GameBg.sprite = Images[1];
+        int num = isdooropen ? (int)BG_STAGE.state_default_open_door : (int)BG_STAGE.state_default;
 
+        GameBg.sprite = Images[num];
     }
 
     void shit()
@@ -133,13 +149,13 @@ public class MessegeManager : MonoBehaviour
             {
                 _text.text = "변기에 앉았지만 바지에 똥을 쌋습니다..";
 
-                GameBg.sprite = Images[2];
+                GameBg.sprite = Images[6];
             }
             else
             {
                 _text.text = "변기에 똥을 쌋습니다!!";
 
-                GameBg.sprite = Images[3];
+                GameBg.sprite = Images[6];
             }
         }
         else
@@ -148,13 +164,13 @@ public class MessegeManager : MonoBehaviour
             {
                 _text.text = "바지에 똥을 쌋습니다..";
 
-                GameBg.sprite = Images[2];
+                GameBg.sprite = Images[6];
             }
             else
             {
                 _text.text = "바닥에 똥을 쌋습니다..";
 
-                GameBg.sprite = Images[4];
+                GameBg.sprite = Images[6];
             }
         }
     }
@@ -166,8 +182,10 @@ public class MessegeManager : MonoBehaviour
             _text.text = "변기에 앉았습니다..";
             issit = true;
 
-            GameBg.sprite = Images[5];
 
+            int num = istakepants ?  (int)BG_STAGE.state_sit : (int)BG_STAGE.state_sit_take_off;
+
+            GameBg.sprite = Images[num];
         }
         else
         {
@@ -193,7 +211,9 @@ public class MessegeManager : MonoBehaviour
             _text.text = "문을 닫았습니다!!";
             isdooropen = false;
 
-            GameBg.sprite = Images[6];
+            int num = istakepants ? (int)BG_STAGE.state_default : (int)BG_STAGE.state_take_off;
+
+            GameBg.sprite = Images[num];
 
         }
         else
@@ -213,8 +233,9 @@ public class MessegeManager : MonoBehaviour
             _text.text = "문을 열었습니다!!";
             isdooropen = true;
 
-            GameBg.sprite = Images[6];
+            int num = istakepants ? (int)BG_STAGE.state_default_open_door : (int)BG_STAGE.state_take_off_open_door;
 
+            GameBg.sprite = Images[num];
         }
     }
 
@@ -243,7 +264,7 @@ public class MessegeManager : MonoBehaviour
             //엔딩
             Debug.Log("엔딩");
 
-            GameBg.sprite = Images[2];
+            GameBg.sprite = Images[6];
 
         }
     }
@@ -255,7 +276,7 @@ public class MessegeManager : MonoBehaviour
         //엔딩
         Debug.Log("엔딩");
 
-        GameBg.sprite = Images[0];
+        GameBg.sprite = Images[6];
 
 
     }
