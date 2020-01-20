@@ -27,7 +27,16 @@ public class MessegeManager : MonoBehaviour
     int pillnum = 0;
 
     public List<Sprite> Images;
+    public List<Sprite> EndingImages;
+    public List<string> EndingTexts;
+    public List<string> EndNumText_korean;
+
     public Image GameBg;
+
+    public GameObject Endings;
+    public Text EndText;
+    public Text EndNumText;
+    public Image EndBg;
 
     private void Start()
     {
@@ -155,7 +164,7 @@ public class MessegeManager : MonoBehaviour
             {
                 _text.text = "변기에 똥을 쌋습니다!!";
 
-                GameBg.sprite = Images[6];
+                GameEnd(0);
             }
         }
         else
@@ -308,5 +317,14 @@ public class MessegeManager : MonoBehaviour
             //엔딩
             Debug.Log("엔딩");
         }
+    }
+
+    void GameEnd(int endnum)
+    {
+        Endings.SetActive(true);
+        EndText.text = EndingTexts[endnum];
+        EndNumText.text += "엔딩_" + endnum + 1 + " : " + EndNumText_korean[endnum];
+        EndBg.sprite = EndingImages[endnum];
+        //isend = true;
     }
 }
